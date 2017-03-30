@@ -1,28 +1,14 @@
-# Print Maps
+# WTF?
 
-Web maps normally don't print well, as their resolution is much lower than
-normal print resolution, not to mention the various other unwanted text and
-elements that print along with the map. Print Maps changes that by leveraging
-[Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) to render print
-resolution maps in the browser.
+Using [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) and Mapbox Vector Tiles, you can select and print a map from the browser that is a high enough resolution to use in print.  No ArcMap, no problem.  The idea is this will give you a decent basemap quickly, you add the relevant labels and overlays and send it to the copy desk.
 
-## Options
-
-* Inches or millimeters
-* PNG or PDF output (PDF is Letter size for inches, A4 for millimeters)
-* Choice of map styles
-* Height and width settings
-* DPI setting
-
-## Building
-
-Add your Mapbox access token to `js/script.js`, run a local webserver such as
-`python3 -m http.server`, and open `index.html`.
+##You'll Need
+*Source for mapbox vector tiles.  You can use mapbox or roll your own.
+*Style files.  Again, use someone elses or roll your own.  I recommend building them via the GUI editor [Maputnik](http://maputnik.com/). You'll want to drop the path to them into index.html in the select option.  Best practice is to delete all labels and add them yourself later - between Open Street Map data and Mapbox wonkiness, the labels juse don't work for print production.
 
 ## License
-
-Print Maps is distributed under the MIT License. For more information, read the
-file `COPYING` or peruse the license
+This is a slightly modified version of print-maps by [Matthew Petroff](http://mpetroff.net/), changed just to make it work better for my workflow.
+Print Maps is distributed under the MIT License. For more information, read the file `COPYING` or peruse the license
 [online](https://github.com/mpetroff/print-maps/blob/master/COPYING).
 
 ## Credits
